@@ -1,0 +1,37 @@
+# 🚫 Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv
+env/
+venv/
+
+# 🧪 Jupyter Notebook
+.ipynb_checkpoints/
+
+# 📊 Results & Outputs
+results/*.html
+results/*.png
+results/*.pdf
+
+# 📦 Data (raw or large intermediate)
+data/*.csv
+data/*.xlsx
+data/*.zip
+data/*.json
+data/*.parquet
+
+# ⚙️ VSCode & system files
+.vscode/
+*.DS_Store
+Thumbs.db
+
+# 🔧 Logs & cache
+*.log
+*.tmp
+.cache/
