@@ -1,0 +1,1523 @@
+=== Multidimensional Cluster Feature Analysis Report ===
+
+Detailed Analysis for Cluster 0:
+========================================
+1. Basic Information
+   - Number of accidents: 7831
+   - Center location: (37.777691, -122.413792)
+   - Neighborhood: South of Market
+
+2. Accident Severity
+   - Fatal accidents: 74 (0.9%)
+   - Injury accidents: 7733
+   - Average casualties: 1.21
+   - Maximum casualties: 18.0
+
+3. Temporal Features
+   - Most common hour: 17h
+   - Most common day: Friday
+   - Weekend accident percentage: 25.4%
+   - Rush hour accident percentage: 26.1%
+   - Nighttime accident percentage: 22.1%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 5.9%
+   - Poor lighting percentage: 3.9%
+   - Poor road condition percentage: 1.8%
+   - Average environmental risk score: 0.85
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.75
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 1:
+========================================
+1. Basic Information
+   - Number of accidents: 423
+   - Center location: (37.765291, -122.431790)
+   - Neighborhood: Castro/Upper Market
+
+2. Accident Severity
+   - Fatal accidents: 3 (0.7%)
+   - Injury accidents: 420
+   - Average casualties: 1.19
+   - Maximum casualties: 6.0
+
+3. Temporal Features
+   - Most common hour: 17h
+   - Most common day: Saturday
+   - Weekend accident percentage: 33.8%
+   - Rush hour accident percentage: 26.0%
+   - Nighttime accident percentage: 28.8%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.6%
+   - Poor lighting percentage: 2.6%
+   - Poor road condition percentage: 1.4%
+   - Average environmental risk score: 0.91
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 10.02
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 2:
+========================================
+1. Basic Information
+   - Number of accidents: 148
+   - Center location: (37.771283, -122.479464)
+   - Neighborhood: Golden Gate Park
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.7%)
+   - Injury accidents: 147
+   - Average casualties: 1.34
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 9h
+   - Most common day: Saturday
+   - Weekend accident percentage: 29.7%
+   - Rush hour accident percentage: 20.3%
+   - Nighttime accident percentage: 19.6%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 16.9%
+   - Poor lighting percentage: 6.1%
+   - Poor road condition percentage: 0.7%
+   - Average environmental risk score: 1.38
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.37
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 3:
+========================================
+1. Basic Information
+   - Number of accidents: 119
+   - Center location: (37.783082, -122.439421)
+   - Neighborhood: Japantown
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 117
+   - Average casualties: 1.17
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 15h
+   - Most common day: Friday
+   - Weekend accident percentage: 23.5%
+   - Rush hour accident percentage: 25.2%
+   - Nighttime accident percentage: 17.6%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 7.6%
+   - Poor lighting percentage: 1.7%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.87
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.44
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 4:
+========================================
+1. Basic Information
+   - Number of accidents: 104
+   - Center location: (37.773188, -122.437466)
+   - Neighborhood: Hayes Valley
+
+2. Accident Severity
+   - Fatal accidents: 1 (1.0%)
+   - Injury accidents: 103
+   - Average casualties: 1.20
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 18h
+   - Most common day: Friday
+   - Weekend accident percentage: 34.6%
+   - Rush hour accident percentage: 26.0%
+   - Nighttime accident percentage: 27.9%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 7.7%
+   - Poor lighting percentage: 3.8%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.88
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 9.89
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 5:
+========================================
+1. Basic Information
+   - Number of accidents: 122
+   - Center location: (37.721215, -122.447906)
+   - Neighborhood: Outer Mission
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.8%)
+   - Injury accidents: 119
+   - Average casualties: 1.47
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 13h
+   - Most common day: Saturday
+   - Weekend accident percentage: 32.0%
+   - Rush hour accident percentage: 19.7%
+   - Nighttime accident percentage: 28.7%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 10.7%
+   - Poor lighting percentage: 2.5%
+   - Poor road condition percentage: 1.6%
+   - Average environmental risk score: 1.07
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 9.10
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 6:
+========================================
+1. Basic Information
+   - Number of accidents: 110
+   - Center location: (37.710771, -122.456164)
+   - Neighborhood: Oceanview/Merced/Ingleside
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.9%)
+   - Injury accidents: 109
+   - Average casualties: 1.58
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 13h
+   - Most common day: Sunday
+   - Weekend accident percentage: 29.1%
+   - Rush hour accident percentage: 25.5%
+   - Nighttime accident percentage: 17.3%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.4%
+   - Poor lighting percentage: 4.5%
+   - Poor road condition percentage: 0.9%
+   - Average environmental risk score: 0.74
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.66
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 7:
+========================================
+1. Basic Information
+   - Number of accidents: 133
+   - Center location: (37.734152, -122.390915)
+   - Neighborhood: Bayview Hunters Point
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.8%)
+   - Injury accidents: 132
+   - Average casualties: 1.49
+   - Maximum casualties: 6.0
+
+3. Temporal Features
+   - Most common hour: 16h
+   - Most common day: Monday
+   - Weekend accident percentage: 31.6%
+   - Rush hour accident percentage: 28.6%
+   - Nighttime accident percentage: 13.5%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 3.0%
+   - Poor lighting percentage: 5.3%
+   - Poor road condition percentage: 0.8%
+   - Average environmental risk score: 0.59
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.31
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 8:
+========================================
+1. Basic Information
+   - Number of accidents: 295
+   - Center location: (37.765716, -122.408804)
+   - Neighborhood: Mission
+
+2. Accident Severity
+   - Fatal accidents: 6 (2.0%)
+   - Injury accidents: 290
+   - Average casualties: 1.24
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 15h
+   - Most common day: Tuesday
+   - Weekend accident percentage: 19.3%
+   - Rush hour accident percentage: 32.5%
+   - Nighttime accident percentage: 11.5%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.8%
+   - Poor lighting percentage: 3.4%
+   - Poor road condition percentage: 0.7%
+   - Average environmental risk score: 0.72
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.90
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 9:
+========================================
+1. Basic Information
+   - Number of accidents: 122
+   - Center location: (37.734642, -122.475082)
+   - Neighborhood: Sunset/Parkside
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.8%)
+   - Injury accidents: 122
+   - Average casualties: 1.39
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 18h
+   - Most common day: Thursday
+   - Weekend accident percentage: 34.4%
+   - Rush hour accident percentage: 22.1%
+   - Nighttime accident percentage: 21.3%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 7.4%
+   - Poor lighting percentage: 4.9%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.97
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.97
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 10:
+========================================
+1. Basic Information
+   - Number of accidents: 111
+   - Center location: (37.784837, -122.431265)
+   - Neighborhood: Japantown
+
+2. Accident Severity
+   - Fatal accidents: 2 (1.8%)
+   - Injury accidents: 108
+   - Average casualties: 1.39
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 14h
+   - Most common day: Sunday
+   - Weekend accident percentage: 30.6%
+   - Rush hour accident percentage: 18.9%
+   - Nighttime accident percentage: 16.2%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 7.2%
+   - Poor lighting percentage: 3.6%
+   - Poor road condition percentage: 0.9%
+   - Average environmental risk score: 0.92
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 6.76
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 11:
+========================================
+1. Basic Information
+   - Number of accidents: 184
+   - Center location: (37.765755, -122.477598)
+   - Neighborhood: Golden Gate Park
+
+2. Accident Severity
+   - Fatal accidents: 3 (1.6%)
+   - Injury accidents: 182
+   - Average casualties: 1.39
+   - Maximum casualties: 6.0
+
+3. Temporal Features
+   - Most common hour: 17h
+   - Most common day: Saturday
+   - Weekend accident percentage: 29.3%
+   - Rush hour accident percentage: 23.9%
+   - Nighttime accident percentage: 19.0%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 4.9%
+   - Poor lighting percentage: 4.3%
+   - Poor road condition percentage: 1.1%
+   - Average environmental risk score: 0.74
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.99
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 12:
+========================================
+1. Basic Information
+   - Number of accidents: 103
+   - Center location: (37.748435, -122.418171)
+   - Neighborhood: Bernal Heights
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 103
+   - Average casualties: 1.24
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 0h
+   - Most common day: Saturday
+   - Weekend accident percentage: 35.0%
+   - Rush hour accident percentage: 19.4%
+   - Nighttime accident percentage: 30.1%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 2.9%
+   - Poor lighting percentage: 2.9%
+   - Poor road condition percentage: 1.9%
+   - Average environmental risk score: 0.75
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 9.04
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 13:
+========================================
+1. Basic Information
+   - Number of accidents: 61
+   - Center location: (37.723272, -122.436094)
+   - Neighborhood: Excelsior
+
+2. Accident Severity
+   - Fatal accidents: 2 (3.3%)
+   - Injury accidents: 58
+   - Average casualties: 1.26
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 10h
+   - Most common day: Monday
+   - Weekend accident percentage: 21.3%
+   - Rush hour accident percentage: 34.4%
+   - Nighttime accident percentage: 9.8%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 13.1%
+   - Poor lighting percentage: 1.6%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 1.03
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.27
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 14:
+========================================
+1. Basic Information
+   - Number of accidents: 57
+   - Center location: (37.743046, -122.475650)
+   - Neighborhood: Sunset/Parkside
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 57
+   - Average casualties: 1.25
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 12h
+   - Most common day: Friday
+   - Weekend accident percentage: 29.8%
+   - Rush hour accident percentage: 10.5%
+   - Nighttime accident percentage: 29.8%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 12.3%
+   - Poor lighting percentage: 1.8%
+   - Poor road condition percentage: 3.5%
+   - Average environmental risk score: 1.12
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.71
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 15:
+========================================
+1. Basic Information
+   - Number of accidents: 191
+   - Center location: (37.772626, -122.445826)
+   - Neighborhood: Golden Gate Park
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 190
+   - Average casualties: 1.21
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 16h
+   - Most common day: Friday
+   - Weekend accident percentage: 28.3%
+   - Rush hour accident percentage: 22.5%
+   - Nighttime accident percentage: 24.6%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.8%
+   - Poor lighting percentage: 2.6%
+   - Poor road condition percentage: 1.0%
+   - Average environmental risk score: 0.86
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.43
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 16:
+========================================
+1. Basic Information
+   - Number of accidents: 9
+   - Center location: (37.782470, -122.392858)
+   - Neighborhood: Financial District/South Beach
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 9
+   - Average casualties: 1.00
+   - Maximum casualties: 1.0
+
+3. Temporal Features
+   - Most common hour: 9h
+   - Most common day: Friday
+   - Weekend accident percentage: 11.1%
+   - Rush hour accident percentage: 77.8%
+   - Nighttime accident percentage: 0.0%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 0.0%
+   - Poor lighting percentage: 0.0%
+   - Poor road condition percentage: 11.1%
+   - Average environmental risk score: 0.67
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 11.77
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 17:
+========================================
+1. Basic Information
+   - Number of accidents: 61
+   - Center location: (37.748321, -122.410333)
+   - Neighborhood: Bernal Heights
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 61
+   - Average casualties: 1.46
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 17h
+   - Most common day: Tuesday
+   - Weekend accident percentage: 21.3%
+   - Rush hour accident percentage: 32.8%
+   - Nighttime accident percentage: 16.4%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.6%
+   - Poor lighting percentage: 4.9%
+   - Poor road condition percentage: 4.9%
+   - Average environmental risk score: 0.87
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.33
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 18:
+========================================
+1. Basic Information
+   - Number of accidents: 137
+   - Center location: (37.717155, -122.472579)
+   - Neighborhood: Lakeshore
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.7%)
+   - Injury accidents: 136
+   - Average casualties: 1.39
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 21h
+   - Most common day: Tuesday
+   - Weekend accident percentage: 31.4%
+   - Rush hour accident percentage: 18.2%
+   - Nighttime accident percentage: 29.2%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 10.2%
+   - Poor lighting percentage: 2.9%
+   - Poor road condition percentage: 2.2%
+   - Average environmental risk score: 1.17
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.97
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 19:
+========================================
+1. Basic Information
+   - Number of accidents: 75
+   - Center location: (37.741355, -122.423179)
+   - Neighborhood: Bernal Heights
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 75
+   - Average casualties: 1.37
+   - Maximum casualties: 10.0
+
+3. Temporal Features
+   - Most common hour: 14h
+   - Most common day: Saturday
+   - Weekend accident percentage: 37.3%
+   - Rush hour accident percentage: 22.7%
+   - Nighttime accident percentage: 14.7%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.7%
+   - Poor lighting percentage: 4.0%
+   - Poor road condition percentage: 2.7%
+   - Average environmental risk score: 0.79
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 6.45
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 20:
+========================================
+1. Basic Information
+   - Number of accidents: 115
+   - Center location: (37.752288, -122.417825)
+   - Neighborhood: Mission
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 114
+   - Average casualties: 1.17
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 17h
+   - Most common day: Sunday
+   - Weekend accident percentage: 33.0%
+   - Rush hour accident percentage: 25.2%
+   - Nighttime accident percentage: 24.3%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 7.0%
+   - Poor lighting percentage: 3.5%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.78
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.77
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 21:
+========================================
+1. Basic Information
+   - Number of accidents: 137
+   - Center location: (37.773028, -122.471799)
+   - Neighborhood: Golden Gate Park
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.7%)
+   - Injury accidents: 136
+   - Average casualties: 1.38
+   - Maximum casualties: 6.0
+
+3. Temporal Features
+   - Most common hour: 7h
+   - Most common day: Sunday
+   - Weekend accident percentage: 34.3%
+   - Rush hour accident percentage: 19.7%
+   - Nighttime accident percentage: 21.9%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 14.6%
+   - Poor lighting percentage: 1.5%
+   - Poor road condition percentage: 2.9%
+   - Average environmental risk score: 1.34
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.76
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 22:
+========================================
+1. Basic Information
+   - Number of accidents: 121
+   - Center location: (37.795697, -122.423350)
+   - Neighborhood: Russian Hill
+
+2. Accident Severity
+   - Fatal accidents: 2 (1.7%)
+   - Injury accidents: 119
+   - Average casualties: 1.55
+   - Maximum casualties: 6.0
+
+3. Temporal Features
+   - Most common hour: 20h
+   - Most common day: Thursday
+   - Weekend accident percentage: 27.3%
+   - Rush hour accident percentage: 16.5%
+   - Nighttime accident percentage: 31.4%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 8.3%
+   - Poor lighting percentage: 4.1%
+   - Poor road condition percentage: 5.8%
+   - Average environmental risk score: 1.12
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 9.42
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 23:
+========================================
+1. Basic Information
+   - Number of accidents: 103
+   - Center location: (37.769391, -122.413372)
+   - Neighborhood: Mission
+
+2. Accident Severity
+   - Fatal accidents: 1 (1.0%)
+   - Injury accidents: 102
+   - Average casualties: 1.27
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 17h
+   - Most common day: Monday
+   - Weekend accident percentage: 24.3%
+   - Rush hour accident percentage: 32.0%
+   - Nighttime accident percentage: 16.5%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 3.9%
+   - Poor lighting percentage: 7.8%
+   - Poor road condition percentage: 1.9%
+   - Average environmental risk score: 0.75
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.51
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 24:
+========================================
+1. Basic Information
+   - Number of accidents: 111
+   - Center location: (37.776115, -122.393941)
+   - Neighborhood: Mission Bay
+
+2. Accident Severity
+   - Fatal accidents: 2 (1.8%)
+   - Injury accidents: 111
+   - Average casualties: 1.41
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 18h
+   - Most common day: Friday
+   - Weekend accident percentage: 26.1%
+   - Rush hour accident percentage: 30.6%
+   - Nighttime accident percentage: 19.8%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 3.6%
+   - Poor lighting percentage: 7.2%
+   - Poor road condition percentage: 1.8%
+   - Average environmental risk score: 0.79
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 9.22
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 25:
+========================================
+1. Basic Information
+   - Number of accidents: 133
+   - Center location: (37.716267, -122.440995)
+   - Neighborhood: Excelsior
+
+2. Accident Severity
+   - Fatal accidents: 2 (1.5%)
+   - Injury accidents: 131
+   - Average casualties: 1.20
+   - Maximum casualties: 5.0
+
+3. Temporal Features
+   - Most common hour: 12h
+   - Most common day: Saturday
+   - Weekend accident percentage: 36.1%
+   - Rush hour accident percentage: 18.8%
+   - Nighttime accident percentage: 27.1%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 9.0%
+   - Poor lighting percentage: 5.3%
+   - Poor road condition percentage: 0.8%
+   - Average environmental risk score: 1.08
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.85
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 26:
+========================================
+1. Basic Information
+   - Number of accidents: 89
+   - Center location: (37.753001, -122.406356)
+   - Neighborhood: Mission
+
+2. Accident Severity
+   - Fatal accidents: 1 (1.1%)
+   - Injury accidents: 89
+   - Average casualties: 1.31
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 20h
+   - Most common day: Thursday
+   - Weekend accident percentage: 20.2%
+   - Rush hour accident percentage: 28.1%
+   - Nighttime accident percentage: 21.3%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 9.0%
+   - Poor lighting percentage: 7.9%
+   - Poor road condition percentage: 2.2%
+   - Average environmental risk score: 1.12
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.99
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 27:
+========================================
+1. Basic Information
+   - Number of accidents: 98
+   - Center location: (37.720727, -122.475277)
+   - Neighborhood: Lakeshore
+
+2. Accident Severity
+   - Fatal accidents: 1 (1.0%)
+   - Injury accidents: 98
+   - Average casualties: 1.22
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 12h
+   - Most common day: Friday
+   - Weekend accident percentage: 25.5%
+   - Rush hour accident percentage: 24.5%
+   - Nighttime accident percentage: 19.4%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 9.2%
+   - Poor lighting percentage: 1.0%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.88
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.99
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 28:
+========================================
+1. Basic Information
+   - Number of accidents: 127
+   - Center location: (37.742651, -122.388136)
+   - Neighborhood: Bayview Hunters Point
+
+2. Accident Severity
+   - Fatal accidents: 1 (0.8%)
+   - Injury accidents: 125
+   - Average casualties: 1.64
+   - Maximum casualties: 18.0
+
+3. Temporal Features
+   - Most common hour: 18h
+   - Most common day: Friday
+   - Weekend accident percentage: 27.6%
+   - Rush hour accident percentage: 29.9%
+   - Nighttime accident percentage: 13.4%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 3.9%
+   - Poor lighting percentage: 4.7%
+   - Poor road condition percentage: 3.9%
+   - Average environmental risk score: 0.77
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.52
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 29:
+========================================
+1. Basic Information
+   - Number of accidents: 26
+   - Center location: (37.755439, -122.417628)
+   - Neighborhood: Mission
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 26
+   - Average casualties: 1.15
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 18h
+   - Most common day: Saturday
+   - Weekend accident percentage: 46.2%
+   - Rush hour accident percentage: 11.5%
+   - Nighttime accident percentage: 38.5%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 3.8%
+   - Poor lighting percentage: 7.7%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.88
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 9.56
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 30:
+========================================
+1. Basic Information
+   - Number of accidents: 95
+   - Center location: (37.732420, -122.405606)
+   - Neighborhood: Portola
+
+2. Accident Severity
+   - Fatal accidents: 1 (1.1%)
+   - Injury accidents: 92
+   - Average casualties: 1.25
+   - Maximum casualties: 6.0
+
+3. Temporal Features
+   - Most common hour: 15h
+   - Most common day: Wednesday
+   - Weekend accident percentage: 21.1%
+   - Rush hour accident percentage: 27.4%
+   - Nighttime accident percentage: 18.9%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 8.4%
+   - Poor lighting percentage: 6.3%
+   - Poor road condition percentage: 1.1%
+   - Average environmental risk score: 0.87
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 8.34
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 31:
+========================================
+1. Basic Information
+   - Number of accidents: 83
+   - Center location: (37.771351, -122.453950)
+   - Neighborhood: Golden Gate Park
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 83
+   - Average casualties: 1.13
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 18h
+   - Most common day: Sunday
+   - Weekend accident percentage: 37.3%
+   - Rush hour accident percentage: 18.1%
+   - Nighttime accident percentage: 38.6%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 10.8%
+   - Poor lighting percentage: 1.2%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 1.19
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 10.60
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 32:
+========================================
+1. Basic Information
+   - Number of accidents: 32
+   - Center location: (37.729283, -122.392637)
+   - Neighborhood: Bayview Hunters Point
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 32
+   - Average casualties: 1.44
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 16h
+   - Most common day: Wednesday
+   - Weekend accident percentage: 34.4%
+   - Rush hour accident percentage: 31.2%
+   - Nighttime accident percentage: 28.1%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.2%
+   - Poor lighting percentage: 9.4%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.97
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 10.46
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 33:
+========================================
+1. Basic Information
+   - Number of accidents: 15
+   - Center location: (37.797736, -122.406265)
+   - Neighborhood: North Beach
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 15
+   - Average casualties: 1.13
+   - Maximum casualties: 2.0
+
+3. Temporal Features
+   - Most common hour: 2h
+   - Most common day: Monday
+   - Weekend accident percentage: 33.3%
+   - Rush hour accident percentage: 13.3%
+   - Nighttime accident percentage: 53.3%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 6.7%
+   - Poor lighting percentage: 6.7%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 1.40
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 12.88
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 34:
+========================================
+1. Basic Information
+   - Number of accidents: 20
+   - Center location: (37.722443, -122.395619)
+   - Neighborhood: Bayview Hunters Point
+
+2. Accident Severity
+   - Fatal accidents: 1 (5.0%)
+   - Injury accidents: 20
+   - Average casualties: 1.60
+   - Maximum casualties: 4.0
+
+3. Temporal Features
+   - Most common hour: 0h
+   - Most common day: Sunday
+   - Weekend accident percentage: 35.0%
+   - Rush hour accident percentage: 15.0%
+   - Nighttime accident percentage: 30.0%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 0.0%
+   - Poor lighting percentage: 5.0%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.55
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 9.83
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 35:
+========================================
+1. Basic Information
+   - Number of accidents: 7
+   - Center location: (37.769618, -122.407639)
+   - Neighborhood: South of Market
+
+2. Accident Severity
+   - Fatal accidents: 1 (14.3%)
+   - Injury accidents: 6
+   - Average casualties: 1.00
+   - Maximum casualties: 1.0
+
+3. Temporal Features
+   - Most common hour: 8h
+   - Most common day: Tuesday
+   - Weekend accident percentage: 0.0%
+   - Rush hour accident percentage: 57.1%
+   - Nighttime accident percentage: 0.0%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 0.0%
+   - Poor lighting percentage: 0.0%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.14
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 12.88
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 36:
+========================================
+1. Basic Information
+   - Number of accidents: 5
+   - Center location: (37.779958, -122.432032)
+   - Neighborhood: Western Addition
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 5
+   - Average casualties: 1.40
+   - Maximum casualties: 3.0
+
+3. Temporal Features
+   - Most common hour: 12h
+   - Most common day: Friday
+   - Weekend accident percentage: 20.0%
+   - Rush hour accident percentage: 0.0%
+   - Nighttime accident percentage: 0.0%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 0.0%
+   - Poor lighting percentage: 0.0%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.00
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 0.00
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 37:
+========================================
+1. Basic Information
+   - Number of accidents: 9
+   - Center location: (37.723673, -122.400808)
+   - Neighborhood: Bayview Hunters Point
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 9
+   - Average casualties: 1.33
+   - Maximum casualties: 3.0
+
+3. Temporal Features
+   - Most common hour: 21h
+   - Most common day: Friday
+   - Weekend accident percentage: 33.3%
+   - Rush hour accident percentage: 22.2%
+   - Nighttime accident percentage: 22.2%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 0.0%
+   - Poor lighting percentage: 0.0%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 0.67
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.88
+   - Risk level: Low
+
+========================================
+
+Detailed Analysis for Cluster 38:
+========================================
+1. Basic Information
+   - Number of accidents: 7
+   - Center location: (37.777549, -122.391127)
+   - Neighborhood: Mission Bay
+
+2. Accident Severity
+   - Fatal accidents: 0 (0.0%)
+   - Injury accidents: 7
+   - Average casualties: 1.14
+   - Maximum casualties: 2.0
+
+3. Temporal Features
+   - Most common hour: 19h
+   - Most common day: Wednesday
+   - Weekend accident percentage: 14.3%
+   - Rush hour accident percentage: 28.6%
+   - Nighttime accident percentage: 14.3%
+
+4. Accident Type
+   - Most common collision type: Other
+   - Pedestrian-involved percentage: 0.0%
+   - Bicycle-involved percentage: 0.0%
+   - Multi-party accident percentage: 100.0%
+
+5. Environmental Conditions
+   - Most common weather: Good
+   - Bad weather percentage: 0.0%
+   - Poor lighting percentage: 0.0%
+   - Poor road condition percentage: 0.0%
+   - Average environmental risk score: 1.14
+
+6. Comprehensive Risk Assessment
+   - Overall risk score: 7.31
+   - Risk level: Low
+
+========================================
+

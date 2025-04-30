@@ -1,0 +1,22 @@
+{
+    "peak_year": {
+        "year": 2019,
+        "count": 3481
+    },
+    "peak_month": {
+        "month": "October",
+        "count": 5883
+    },
+    "peak_day": {
+        "day": "Friday",
+        "count": 9661
+    },
+    "peak_time": {
+        "time": "Afternoon",
+        "count": 18533
+    },
+    "peak_hour": {
+        "hour": 17,
+        "count": 4614
+    }
+}
