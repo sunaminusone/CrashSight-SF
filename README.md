@@ -158,12 +158,83 @@ The table below summarizes the quadrant assignment of all spatial units based on
 
 ---
 
-### 🚨 Module 3: Crash Severity Prediction
+### 🚨 Module 3: Crash Risk Prediction Modeling
 
-- Developed binary and multinomial logistic regression models for crash severity
-- Compared baseline models with tree-based classifiers (e.g., XGBoost)
-- Evaluated models using cross-validation, confusion matrices, ROC-AUC, and F1-score
-- Identified most influential risk factors through model coefficients and feature importance
+This module aims to predict **whether a specific grid cell will experience a serious traffic accident** based on geometric and environmental features. The objective is to support proactive resource allocation and risk management.
+
+---
+
+#### 🔧 Model Overview
+
+- **Model Type**: Binary Logistic Regression  
+- **Target Variable**: `has_accident` (1 = accident occurs in the grid, 0 = not)
+
+---
+
+#### 🧠 Feature Engineering
+
+- Derived geometric features from accident points, such as:
+  - `shape_complexity`: degree of spatial irregularity in the grid
+  - `dist_to_intersection`: proximity to nearest road intersection
+  - `seasonality_index`: crash intensity related to time-of-year
+
+- Integrated **traffic volume and travel behavior** data using Google Maps API:
+
+> API Docs: [Google Maps Distance Matrix API](https://developers.google.com/maps/documentation/distance-matrix)
+
+Examples of features extracted via API:
+- Estimated driving time to major intersections or highways
+- Time-of-day congestion estimates
+- Travel speed variation across weekdays vs. weekends
+
+---
+
+#### 📊 Model Performance
+
+The model achieved **80% accuracy** and an **AUC of 0.8553**, indicating strong ability to discriminate between accident-prone and low-risk grid areas.
+
+- **Top 3 important predictors**:
+  1. `traffic_volume`
+  2. `dist_to_intersection`
+  3. `shape_complexity`
+
+---
+
+#### 📉 Confusion Matrix
+
+```
+[[363 121]
+ [ 81 434]]
+```
+
+---
+
+#### 📝 Classification Report
+
+```
+              precision    recall  f1-score   support
+
+           0       0.82      0.75      0.78       484
+           1       0.78      0.84      0.81       515
+
+    accuracy                           0.80       999
+   macro avg       0.80      0.80      0.80       999
+weighted avg       0.80      0.80      0.80       999
+```
+
+---
+
+#### 📈 ROC-AUC Score
+
+- **AUC Score**: `0.8553`
+
+---
+
+### ✅ Conclusion
+
+The logistic regression model demonstrates strong predictive power in identifying high-risk grid regions in San Francisco. With interpretable coefficients and consistent performance across metrics, it provides a solid foundation for real-world traffic risk management.
+
+This grid-based approach transforms complex point-level crash data into actionable, location-specific insights — enabling spatially targeted safety interventions and resource allocation strategies.
 
 ---
 
