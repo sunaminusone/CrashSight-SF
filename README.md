@@ -325,6 +325,103 @@ Each selected site’s spatial coverage was visualized using **Voronoi tessellat
 
 ---
 
+### 🚓 Module 5: Patrol Route Optimization (TSP)
+
+This module builds on the emergency station deployment strategy by designing an **optimized patrol route** that visits all predicted crash hotspots with minimal travel distance. The goal is to support efficient routing for mobile patrol units (e.g., police, EMS).
+
+---
+
+#### 🎯 Problem Statement
+
+- Given a set of high-risk grid locations (identified via KDE or LISA) and selected emergency stations, we aim to find the **shortest loop that visits all patrol targets**.
+- The problem is formulated as a **Traveling Salesman Problem (TSP)**, where a single patrol vehicle starts and ends at the depot and visits all locations exactly once.
+
+---
+
+#### 🧮 Traveling Salesman Problem (TSP) – Mathematical Formulation
+
+Let:
+
+- **N**: Set of crash hotspot nodes (to be patrolled)  
+- **dᵢⱼ**: Distance between node *i* and node *j*  
+- **xᵢⱼ** ∈ {0,1}: Binary variable indicating if the route goes directly from node *i* to node *j*  
+- **uᵢ**: Helper variable to eliminate subtours (used in MTZ formulation)
+
+**Objective**  
+Minimize the total travel distance:
+
+```
+Minimize  ∑ᵢ∈N ∑ⱼ∈N ( dᵢⱼ × xᵢⱼ )
+```
+
+**Subject to:**
+
+1. **Each node must be entered exactly once:**
+
+```
+For all j ∈ N:   ∑ᵢ∈N xᵢⱼ = 1
+```
+
+2. **Each node must be exited exactly once:**
+
+```
+For all i ∈ N:   ∑ⱼ∈N xᵢⱼ = 1
+```
+
+3. **Subtour Elimination Constraints (Miller–Tucker–Zemlin):**
+
+```
+For all i ≠ j ∈ {2, ..., n}:   uᵢ - uⱼ + n × xᵢⱼ ≤ n - 1
+```
+
+4. **Binary decision variables:**
+
+```
+xᵢⱼ ∈ {0, 1}    for all i, j ∈ N
+```
+
+> 📚 Reference: [Miller–Tucker–Zemlin formulation](https://en.wikipedia.org/wiki/Travelling_salesman_problem#Integer_linear_programming_formulation)
+
+---
+
+#### 📈 Optimized Patrol Route Output
+
+The following table shows the optimal visiting sequence for 10 key crash hotspots:
+
+| From Node | To Node | Distance (meters) |
+|-----------|---------|-------------------|
+| 0         | 13      | 1791.31           |
+| 13        | 24      | 2324.15           |
+| 24        | 23      | 2031.49           |
+| 23        | 16      | 4274.71           |
+| 16        | 7       | 6014.95           |
+| 7         | 22      | 4231.11           |
+| 22        | 28      | 5834.92           |
+| 28        | 29      | 2897.97           |
+| 29        | 34      | 4315.37           |
+| 34        | 1       | 4508.09           |
+
+> **Total Patrol Distance**: **38,224.06 meters**
+
+---
+
+#### 🗺️ Route Visualization
+
+[![Patrol Route Map](results/output/screenshot-TSP.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/output/patrol_route.html)  
+🔗 [Click to view interactive patrol route map](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/output/patrol_route.html)
+
+> The map shows a closed-loop route connecting all selected hotspots, beginning and ending at the depot.
+
+---
+
+### ✅ Conclusion
+
+- The optimized patrol path efficiently connects all high-risk zones using a single vehicle.
+- This TSP-based strategy minimizes redundant travel and improves spatial patrol planning.
+- Future extensions may explore **multi-vehicle patrols (M-TSP)** or **dynamic routing based on real-time crash risk updates**.
+
+---
+
 ## 🗂️ Project Structure
 
 ```bash
