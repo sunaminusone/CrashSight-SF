@@ -1,4 +1,4 @@
-# 🚦 SF Crash Sight 2.0: San Francisco Traffic Accident Prediction & Optimization
+# 🚦 SF Crash Sight: San Francisco Traffic Accident Prediction & Optimization
 
 > An intelligent system for crash hotspot analysis, severity prediction, and emergency response optimization using spatial data science.
 
