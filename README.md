@@ -1,64 +1,158 @@
-# 🚦 CrashSight-SF: Traffic Incident Analysis in San Francisco
+# 🚦 SF Crash Sight 2.0: San Francisco Traffic Accident Prediction & Optimization
 
-CrashSight-SF is a data science project aimed at modeling and visualizing traffic accidents in San Francisco using public datasets and advanced analytical tools.
-
-This repository explores how **geometric probability**, **queueing theory**, and **discrete choice models** can help uncover spatial-temporal patterns and improve urban mobility safety.
+> An intelligent system for crash hotspot analysis, severity prediction, and emergency response optimization using spatial data science.
 
 ---
 
-## 🧠 Knowledge Modules
+## 📖 Table of Contents
 
-| Module | Description |
-|--------|-------------|
-| 📏 **L3: Geometrical Probability** | Estimate spatial density and identify crash hotspots |
-| ⏳ **L4: Spatial Queueing**        | Model pressure from urban traffic bottlenecks |
-| 🚖 **L5: Ride-Hailing Platform**   | Study how mobility platforms impact safety |
-| 🚗 **L6: Discrete Choice Analysis** | Simulate driver behavior and risk preferences |
-| 🛣️ **L7: Urban Traffic Networks**  | Construct networks and link them with accident patterns |
-
----
-
-## 📁 Project Structure
-
-```
-CrashSight-SF/
-├── README.md
-├── .gitignore
-├── requirements.txt
-├── data/                 # Raw and cleaned traffic data
-├── notebooks/            # Jupyter notebooks for EDA & experiments
-├── src/
-│   ├── visualization/    # Plotting & dashboards
-│   ├── modeling/         # Predictive & causal models
-│   └── utils/            # Helper functions
-└── results/              # Output charts, metrics, and exports
-```
+- [📌 Project Overview](#-project-overview)
+- [🧩 Module Breakdown](#-module-breakdown)
+- [🗺️ Map Previews](#-map-previews)
+- [🗂️ Project Structure](#-project-structure)
+- [🛠️ Tech Stack](#-tech-stack)
+- [📊 Dataset Description](#-dataset-description)
+- [📈 Future Work](#-future-work)
+- [📬 Contact](#-contact)
 
 ---
 
-## ⚙️ Setup Instructions
+## 📌 Project Overview
+
+**CrashSight SF 2.0** is a comprehensive spatial analytics system built on 61,702 traffic crash records from San Francisco. It aims to:
+
+- Detect spatial patterns and hotspots of traffic incidents
+- Predict crash severity using interpretable and scalable models
+- Optimize emergency resource allocation using spatial optimization
+- Visualize insights interactively for policy and operational support
+
+---
+
+## 🧩 Module Breakdown
+
+### 📁 Module 1: Data Preparation & EDA
+
+- **Data Cleaning & Feature Engineering**
+  - Handled missing and inconsistent values in over 60 fields
+  - Generated derived features including:
+    - `is_weekend`, `is_rush_hour`, `day_of_week`, `time_of_day`
+    - Simplified categories for weather (`weather_1_simple`) and road condition (`road_condition_simple`)
+  - Assigned accidents to spatial grids using `cKDTree` for efficient point-to-cell matching
+
+- **Exploratory Data Analysis**
+  1. **Temporal Analysis**  
+     - Plotted crash counts over `year`, `month`, `week`, and `day`
+     - Visualized weekly and daily crash trends using heatmaps
+  2. **Spatial Analysis**  
+     - Generated crash density heatmaps over SF using latitude/longitude
+     - Created cluster maps by severity level
+     - Analyzed accident frequencies across 100+ neighborhoods
+  3. **Collision Characteristics**  
+     - Investigated crash patterns based on:
+       - Road surface conditions
+       - Weather types
+       - Lighting conditions
+       - Time-of-day categories
+  4. **Responsibility Analysis**  
+     - Explored fault distribution and associated patterns (e.g., driver vs. pedestrian responsibility)
+
+### 🔥 Module 2: Spatial Hotspot Detection
+
+- Conducted kernel density estimation (KDE) to visualize crash concentration
+- Calculated Global Moran’s I for spatial autocorrelation
+- Applied DBSCAN clustering by severity to detect spatially concentrated crash clusters
+- Generated heatmaps and interactive cluster maps using Folium
+
+### 🚨 Module 3: Crash Severity Prediction
+
+- Developed binary and multinomial logistic regression models for crash severity
+- Compared baseline models with tree-based classifiers (e.g., XGBoost)
+- Evaluated models using cross-validation, confusion matrices, ROC-AUC, and F1-score
+- Identified most influential risk factors through model coefficients and feature importance
+
+### 🧭 Module 4: Resource Optimization
+
+- Solved the **p-median facility location problem** to place emergency response stations
+- Used **Voronoi diagrams** to divide service zones and evaluate coverage
+- Simulated response time improvements and produced optimal layouts
+
+---
+
+## 🗺️ Map Previews
+
+### 🌡️ Crash Heatmap of San Francisco (Folium)
+
+![Heatmap Screenshot](figures/sf_crash_heatmap.png)
+
+[🔗 View Full Interactive Heatmap (Folium)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_heatmap.html)
+
+---
+
+### 🔶 Crash Cluster Map (by Severity Level)
+
+![Cluster Map Screenshot](figures/sf_crash_cluster_map.png)
+
+[🔗 View Full Interactive Cluster Map (Folium)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_cluster_map.html)
+
+---
+
+## 🗂️ Project Structure
 
 ```bash
-# Install required packages
-pip install -r requirements.txt
+CrashSight-SF/
+│
+├── data/                # Raw and processed crash datasets
+├── notebooks/           # Jupyter/Colab notebooks for each module
+├── src/                 # Source code (KDE, optimization, modeling)
+├── results/             # Generated maps, plots, evaluation reports
+│   └── maps/            # Folium interactive .html maps
+├── figures/             # Static screenshots for README visualization
+├── models/              # Trained models (e.g., .pkl, .joblib)
+├── requirements.txt     # Python dependencies
+├── README.md            # Project documentation
 ```
 
 ---
 
-## 📊 Dataset Source
+## 🛠️ Tech Stack
 
-- [🚗 SF Open Data: Traffic Crashes Resulting in Injury](https://data.sfgov.org/Public-Safety/Traffic-Crashes-Resulting-in-Injury/ubvf-ztfx/about_data)
-
----
-
-## ✨ Author
-
-Made with 💡 by [sunaminusone](https://github.com/sunaminusone)  
-UC Berkeley · INDENG 230 — Spring 2024  
-Let’s make urban traffic safer together!
+- **Languages**: Python 3.10+
+- **Libraries**:  
+  - `pandas`, `geopandas`, `matplotlib`, `scikit-learn`, `statsmodels`
+  - `scipy`, `folium`, `PySAL`, `shapely`, `seaborn`
+  - `ortools`, `pulp` (for optimization)
+- **Visualization**: `Seaborn`, `Kepler.gl`, `Folium`, `Plotly`
+- **Future UI**: `Streamlit` / `Dash`
 
 ---
 
-## 🪪 License
+## 📊 Dataset Description
 
-MIT License — free to use, modify, and share.
+- **Source**: San Francisco Open Data Portal  
+- **Size**: 61,702 crash records × 63 variables  
+- **Key Fields**:
+  - Time: crash date, hour, day of week, rush hour
+  - Space: latitude, longitude, grid ID
+  - Environment: lighting, road condition, weather
+  - Severity: fatal, injury, property damage
+
+---
+
+## 📈 Future Work
+
+- Incorporate **spatio-temporal forecasting** using LSTM or Prophet
+- Deploy interactive web dashboard (Streamlit)
+- Integrate live traffic / weather feeds for real-time predictions
+- Compare results with other cities for generalizability
+
+---
+
+## 📬 Contact
+
+**Author**: Suna (Meixuan Li)  
+📧 sunaaa@berkeley.edu  
+🔗 [GitHub Profile](https://github.com/sunaminusone)  
+🏫 UC Berkeley | MEng in Analytics (Class of 2025)
+
+---
+
