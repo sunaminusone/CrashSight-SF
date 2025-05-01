@@ -56,6 +56,14 @@
   4. **Responsibility Analysis**  
      - Explored fault distribution and associated patterns (e.g., driver vs. pedestrian responsibility)
 
+- **📊 Temporal Crash Summary**
+
+![Temporal Summary](results/output/temporal_analysis_summary.png)
+
+> Yearly, monthly, weekly, and daily patterns in crash frequency
+
+---
+
 ### 🔥 Module 2: Spatial Hotspot Detection
 
 - Conducted kernel density estimation (KDE) to visualize crash concentration
@@ -63,12 +71,16 @@
 - Applied DBSCAN clustering by severity to detect spatially concentrated crash clusters
 - Generated heatmaps and interactive cluster maps using Folium
 
+---
+
 ### 🚨 Module 3: Crash Severity Prediction
 
 - Developed binary and multinomial logistic regression models for crash severity
 - Compared baseline models with tree-based classifiers (e.g., XGBoost)
 - Evaluated models using cross-validation, confusion matrices, ROC-AUC, and F1-score
 - Identified most influential risk factors through model coefficients and feature importance
+
+---
 
 ### 🧭 Module 4: Resource Optimization
 
@@ -82,17 +94,17 @@
 
 ### 🌡️ Crash Heatmap of San Francisco (Folium)
 
-![Heatmap Screenshot](figures/sf_crash_heatmap.png)
+[![Crash Heatmap](figures/sf_crash_heatmap.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_heatmap.html)
 
-[🔗 View Full Interactive Heatmap (Folium)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_heatmap.html)
+> 📍 Click to view full interactive heatmap
 
 ---
 
 ### 🔶 Crash Cluster Map (by Severity Level)
 
-![Cluster Map Screenshot](figures/sf_crash_cluster_map.png)
+[![Cluster Map](figures/sf_crash_cluster_map.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_cluster_map.html)
 
-[🔗 View Full Interactive Cluster Map (Folium)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_cluster_map.html)
+> 📍 Click to view full interactive cluster map
 
 ---
 
@@ -106,6 +118,7 @@ CrashSight-SF/
 ├── src/                 # Source code (KDE, optimization, modeling)
 ├── results/             # Generated maps, plots, evaluation reports
 │   └── maps/            # Folium interactive .html maps
+│   └── output/          # Static summary plots (e.g., time series, stats)
 ├── figures/             # Static screenshots for README visualization
 ├── models/              # Trained models (e.g., .pkl, .joblib)
 ├── requirements.txt     # Python dependencies
@@ -151,6 +164,11 @@ CrashSight-SF/
 
 **Author**: Suna (Meixuan Li)  
 📧 sunaaa@berkeley.edu  
+🔗 [GitHub Profile](https://github.com/sunaminusone)  
+🏫 UC Berkeley | MEng in Analytics (Class of 2025)
+
+---
+
 🔗 [GitHub Profile](https://github.com/sunaminusone)  
 🏫 UC Berkeley | MEng in Analytics (Class of 2025)
 
