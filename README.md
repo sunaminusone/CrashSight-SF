@@ -467,10 +467,50 @@ CrashSight-SF/
 
 ## 📈 Future Work
 
-- Incorporate **spatio-temporal forecasting** using LSTM or Prophet
-- Deploy interactive web dashboard (Streamlit)
-- Integrate live traffic / weather feeds for real-time predictions
-- Compare results with other cities for generalizability
+This project currently focuses on route optimization using the Traveling Salesman Problem (TSP). Future directions aim to evolve this into a comprehensive, intelligent patrol planning platform. Key extensions include:
+
+#### 🔁 Multi-Objective Optimization
+- Incorporate additional objectives such as risk coverage and response time alongside route length.
+- Apply Pareto optimization to generate non-dominated solutions for decision-makers.
+- Integrate interactive decision support tools to adjust weights based on real-time priorities.
+
+#### 🕒 Spatiotemporal Data Fusion & Forecasting
+- Develop predictive models using historical crash data to identify future hotspots.
+- Combine forecasted risks with patrol routing for proactive rather than reactive operations.
+- Account for seasonality, time-of-day, and special events in risk distribution.
+
+#### 🚨 Dynamic Real-Time Routing
+- Implement event-driven re-routing algorithms.
+- Design a multi-level decision framework: strategic (long-term), tactical (mid-term), and operational (real-time).
+- Create emergency response protocols that balance ongoing patrols and incident reactions.
+
+#### 📉 Uncertainty Modeling & Robust Optimization
+- Consider travel time uncertainties using stochastic programming.
+- Introduce risk-averse strategies to ensure acceptable performance in worst-case scenarios.
+- Maintain a library of fallback plans to improve resilience to disruptions.
+
+#### 🚗 Multi-Agent Coordination
+- Extend to Vehicle Routing Problem (VRP) for multiple patrol units.
+- Design coordination mechanisms to avoid redundant coverage.
+- Optimize global efficiency while maintaining local autonomy.
+
+#### 🧠 AI-Based Smart Patrol
+- Apply deep reinforcement learning for adaptive patrol strategies.
+- Use graph neural networks to model complex road networks.
+- Enable self-learning from historical patrol trajectories.
+
+#### 🖥️ Integrated Application Platform
+- Connect with real-time communication systems for unit coordination.
+- Develop intuitive visual dashboards showing live coverage and predicted hotspots.
+- Build decision support systems enabling human-AI collaboration.
+
+#### 🧩 Social & Environmental Integration
+- Consider special events (e.g., sports, protests) in patrol planning.
+- Incorporate socio-economic data for fine-grained risk evaluation.
+- Engage community input to better align patrol resources with public needs.
+
+By incrementally implementing these modules, the system can grow from a basic TSP optimizer into a full-featured, intelligent decision support platform for urban patrol planning.
+
 
 ---
 
