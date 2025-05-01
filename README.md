@@ -238,29 +238,90 @@ This grid-based approach transforms complex point-level crash data into actionab
 
 ---
 
-### 🧭 Module 4: Resource Optimization
+### 🧭 Module 4: Emergency Resource Optimization
 
-- Solved the **p-median facility location problem** to place emergency response stations
-- Used **Voronoi diagrams** to divide service zones and evaluate coverage
-- Simulated response time improvements and produced optimal layouts
+This module develops an optimized strategy for deploying emergency service stations (e.g., ambulances, patrol units) based on predicted crash hotspots across San Francisco.
 
 ---
 
-## 🗺️ Map Previews
+#### 🎯 Objective
 
-### 🌡️ Crash Heatmap of San Francisco (Folium)
-
-[![Crash Heatmap](figures/sf_crash_heatmap.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_heatmap.html)
-
-> 📍 Click to view full interactive heatmap
+- Select the **best 10 locations out of 40 potential sites** to install emergency stations.
+- Maximize crash coverage and minimize average response distance.
+- Ensure each accident-prone area is served by its nearest active station.
 
 ---
 
-### 🔶 Crash Cluster Map (by Severity Level)
+#### 🧮 p-Median Optimization Model
 
-[![Cluster Map](figures/sf_crash_cluster_map.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_cluster_map.html)
+Let:
 
-> 📍 Click to view full interactive cluster map
+- **I**: Set of demand points (e.g., predicted accident hotspots)  
+- **J**: Set of potential facility sites  
+- **dᵢⱼ**: Distance between demand point *i* and facility *j*  
+- **xᵢⱼ ∈ {0,1}**: Whether demand point *i* is assigned to facility *j*  
+- **yⱼ ∈ {0,1}**: Whether facility *j* is selected  
+
+**Objective:**
+
+> Minimize total weighted distance between demand points and their assigned facilities:
+
+```
+Minimize ∑ᵢ∈I ∑ⱼ∈J ( dᵢⱼ × xᵢⱼ )
+```
+
+**Subject to:**
+
+1. **Each demand point must be assigned to exactly one facility:**
+
+```
+For all i ∈ I:   ∑ⱼ∈J xᵢⱼ = 1
+```
+
+2. **Assignment can only occur if a facility is opened:**
+
+```
+For all i ∈ I, j ∈ J:   xᵢⱼ ≤ yⱼ
+```
+
+3. **Exactly P facilities must be selected (e.g., P = 10):**
+
+```
+∑ⱼ∈J yⱼ = 10
+```
+
+---
+
+#### 📍 Selected Station Map
+
+[![Selected Sites](results/output/screenshot-pmedian.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/output/emergency_stations_map.html)  
+🔗 [Click to view interactive station map](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/output/emergency_stations_map.html)
+
+---
+
+#### 📐 Voronoi Service Zones
+
+Each selected site’s spatial coverage was visualized using **Voronoi tessellation**, which partitions the city into service zones based on nearest-distance assignment.
+
+[![Voronoi Diagram](results/output/voronoi_static_P8.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/output/voronoi_map_P8.html)  
+🔗 [Click to view interactive Voronoi map](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/output/voronoi_map_P8.html)
+
+---
+
+#### 📊 Coverage Efficiency Analysis
+
+- A multi-distance evaluation was conducted to assess the percent of crash-prone areas that fall within key distance thresholds (e.g., 0.5 km, 1 km).
+- Weighted and unweighted coverage ratios were calculated across all Voronoi zones.
+
+![Coverage Efficiency](results/output/coverage_efficiency.png)
+
+---
+
+### ✅ Optimization Outcome
+
+- The selected stations achieved strong geographic coverage over predicted crash hotspots.
+- Voronoi analysis helped visualize blind zones and overlapping regions.
+- The approach provides a **scalable and explainable resource allocation strategy** for public safety departments or emergency planners.
 
 ---
 
@@ -325,8 +386,4 @@ CrashSight-SF/
 
 ---
 
-🔗 [GitHub Profile](https://github.com/sunaminusone)  
-🏫 UC Berkeley | MEng in Analytics (Class of 2025)
-
----
 
