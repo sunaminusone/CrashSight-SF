@@ -80,10 +80,81 @@
 
 ### 🔥 Module 2: Spatial Hotspot Detection
 
-- Conducted kernel density estimation (KDE) to visualize crash concentration
-- Calculated Global Moran’s I for spatial autocorrelation
-- Applied DBSCAN clustering by severity to detect spatially concentrated crash clusters
-- Generated heatmaps and interactive cluster maps using Folium
+This module focuses on identifying high-risk zones and evaluating the spatial autocorrelation of crash incidents across San Francisco.
+
+---
+
+#### 🔵 1. Kernel Density Estimation (KDE)
+
+- KDE was used to create a continuous surface representing crash concentration intensity across the city.
+- Interactive and static visualizations were generated for visual analysis.
+
+[![KDE Static Heatmap](results/spatial_analysis/kde_static.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/spatial_analysis/kde_interactive.html)  
+🔗 [Click to view interactive KDE map](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/spatial_analysis/kde_interactive.html)
+
+---
+
+#### 🧠 2. Global Moran's I Spatial Autocorrelation
+
+- Moran’s I statistic was computed to assess the degree of overall spatial clustering of traffic accident counts across all grid regions.
+
+![Moran's I Scatterplot](results/spatial_analysis/moran_scatterplot_annotated_counts.png)
+
+##### **Global Moran's I Results**:
+
+- **Moran's I**: `0.962`  
+- **p-value**: `0.001`  
+- **z-score**: `530.032`
+
+##### **Interpretation**:
+
+| Moran's I       | Meaning                                                          |
+|-----------------|------------------------------------------------------------------|
+| Close to **+1** | Strong clustering (high values near high, low near low)         |
+| Around **0**    | Random distribution                                              |
+| Close to **-1** | Strong dispersion (high values near low, or low near high)      |
+
+➡️ Interpretation: The results suggest **extremely strong spatial clustering** of crash counts across the city.
+
+---
+
+#### 🔍 3. Local Indicators of Spatial Association (LISA)
+
+- LISA identifies **local clusters** of high or low crash density and potential spatial outliers.
+- Optimized subplots below visualize spatial regions categorized as:
+  - High-High (hotspots)
+  - Low-Low (coldspots)
+  - High-Low / Low-High (spatial outliers)
+
+![LISA Subplots](results/spatial_analysis/lisa_density_subplots_optimized.png)
+
+##### **LISA Quadrant Summary**
+
+The table below summarizes the quadrant assignment of all spatial units based on local Moran's I values:
+
+| Quadrant                  | Number of Points | Interpretation                                                                 |
+|---------------------------|------------------|---------------------------------------------------------------------------------|
+| High-High (Hotspot)       | 23,994           | Areas with high accident density surrounded by similarly high-density areas (critical accident hotspots). |
+| Low-High (Spatial Outlier)| 862              | Areas with low accident density but surrounded by high-density areas (possible transition zones or anomalies). |
+| Low-Low (Coldspot)        | 35,856           | Areas with low accident density surrounded by other low-density areas (generally safe regions). |
+| High-Low (Spatial Outlier)| 811              | Areas with high accident density but surrounded by low-density areas (isolated hotspots). |
+
+---
+
+### 🧠 Summary Insights
+
+- **Spatial clustering**:  
+  Traffic accidents in San Francisco exhibit strong spatial clustering, particularly in central urban areas and major corridors.
+
+- **Cluster confirmation**:  
+  High-High regions in the LISA map closely match KDE hotspots, reinforcing the validity of identified crash-prone zones.
+
+- **Emerging risk zones**:  
+  Low-High outliers (light blue) may evolve into future hotspots and warrant proactive monitoring.
+
+- **Strategic recommendations**:  
+  - Prioritize traffic safety interventions in High-High zones, such as enhanced signal control, increased patrol presence, and public awareness campaigns.
+  - Apply preventive surveillance in Low-High fringe zones to mitigate potential hotspot expansion.
 
 ---
 
