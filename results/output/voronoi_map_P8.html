@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9e7494ad9f0843c35c0666cf7d9e78ce {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed;
+                    bottom: 50px; left: 50px; width: 200px; height: 120px;
+                    border:2px solid grey; z-index:9999; font-size:14px;
+                    background-color:white; padding: 10px;
+                    ">
+        <p style="margin: 0; font-weight: bold;">事故密度 (点/平方公里)</p>
+        <div style="display: flex; flex-direction: column; height: 80px; justify-content: space-between;">
+        
+            <div style="display: flex; align-items: center;">
+                <div style="width: 20px; height: 20px; background-color:#00FF00;"></div>
+                <span style="margin-left: 5px;">17.16</span>
+            </div>
+            
+            <div style="display: flex; align-items: center;">
+                <div style="width: 20px; height: 20px; background-color:#7FFF00;"></div>
+                <span style="margin-left: 5px;">45.73</span>
+            </div>
+            
+            <div style="display: flex; align-items: center;">
+                <div style="width: 20px; height: 20px; background-color:#FFFE00;"></div>
+                <span style="margin-left: 5px;">74.30</span>
+            </div>
+            
+            <div style="display: flex; align-items: center;">
+                <div style="width: 20px; height: 20px; background-color:#FF7F00;"></div>
+                <span style="margin-left: 5px;">102.87</span>
+            </div>
+            
+            <div style="display: flex; align-items: center;">
+                <div style="width: 20px; height: 20px; background-color:#FF0000;"></div>
+                <span style="margin-left: 5px;">131.44</span>
+            </div>
+            
+        </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_9e7494ad9f0843c35c0666cf7d9e78ce" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9e7494ad9f0843c35c0666cf7d9e78ce = L.map(
+                "map_9e7494ad9f0843c35c0666cf7d9e78ce",
+                {
+                    center: [37.76163664940663, -122.42639024706031],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3af01cb94a3a61f0f11d4e8c8b11f5b5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3af01cb94a3a61f0f11d4e8c8b11f5b5.addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var polygon_20e4bcbb8cab6aede65eb963d0c5b55e = L.polygon(
+                [[37.76037731320383, -122.41534830770658], [37.75532301017836, -122.44560859424708], [37.778325132602106, -122.44459308256297], [37.78261279264434, -122.43255651118311], [37.7732695527298, -122.4141055424225], [37.76037731320383, -122.41534830770658]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#71FF00", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_54c02441db19dc39bc7a6879d25cee32 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23b814d87f4f67ee60214318930290ce = $(`<div id="html_23b814d87f4f67ee60214318930290ce" style="width: 100.0%; height: 100.0%;">站点 1<br>区域内需求点: 337<br>密度: 42.68 点/平方公里</div>`)[0];
+                popup_54c02441db19dc39bc7a6879d25cee32.setContent(html_23b814d87f4f67ee60214318930290ce);
+            
+        
+
+        polygon_20e4bcbb8cab6aede65eb963d0c5b55e.bindPopup(popup_54c02441db19dc39bc7a6879d25cee32)
+        ;
+
+        
+    
+    
+            var polygon_5c2bd05035f6970ef78d46aaf60ae04f = L.polygon(
+                [[37.734176445429426, -122.46336670437162], [37.75054822137263, -122.48429959181755], [37.75237528513922, -122.46509838973627], [37.734176445429426, -122.46336670437162]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFE100", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_cf843050e4ed1ed30b27a17baafd7b54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27898b0c75a04523a51a56b995a1a8a4 = $(`<div id="html_27898b0c75a04523a51a56b995a1a8a4" style="width: 100.0%; height: 100.0%;">站点 29<br>区域内需求点: 176<br>密度: 81.02 点/平方公里</div>`)[0];
+                popup_cf843050e4ed1ed30b27a17baafd7b54.setContent(html_27898b0c75a04523a51a56b995a1a8a4);
+            
+        
+
+        polygon_5c2bd05035f6970ef78d46aaf60ae04f.bindPopup(popup_cf843050e4ed1ed30b27a17baafd7b54)
+        ;
+
+        
+    
+    
+            var polygon_7b54915df4c626799facb9530403ae10 = L.polygon(
+                [[37.78261279264434, -122.43255651118311], [37.80450765528327, -122.41333772101585], [37.77914621200257, -122.4041255103774], [37.7732695527298, -122.4141055424225], [37.78261279264434, -122.43255651118311]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFF800", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_89406c8526ad0998f4cc8c70fc697bfc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41115314c34b3617331910b855f21dd7 = $(`<div id="html_41115314c34b3617331910b855f21dd7" style="width: 100.0%; height: 100.0%;">站点 24<br>区域内需求点: 416<br>密度: 75.81 点/平方公里</div>`)[0];
+                popup_89406c8526ad0998f4cc8c70fc697bfc.setContent(html_41115314c34b3617331910b855f21dd7);
+            
+        
+
+        polygon_7b54915df4c626799facb9530403ae10.bindPopup(popup_89406c8526ad0998f4cc8c70fc697bfc)
+        ;
+
+        
+    
+    
+            var polygon_42cbb6b3e2b23226f47da5f0a4a3fc3f = L.polygon(
+                [[37.72291030164857, -122.41725728559992], [37.727905156809484, -122.41439804220776], [37.73426434728477, -122.39247335018841], [37.73426434728477, -122.3924733501884], [37.73426434728475, -122.39247335018838], [37.69881742304066, -122.38901400524969], [37.69847457584318, -122.41016977738492], [37.72291030164857, -122.41725728559992]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#25FF00", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_4fa6abc332234c94033b76011b1c4499 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61825f5f3407e1075df81d7be1236e26 = $(`<div id="html_61825f5f3407e1075df81d7be1236e26" style="width: 100.0%; height: 100.0%;">站点 22<br>区域内需求点: 240<br>密度: 25.49 点/平方公里</div>`)[0];
+                popup_4fa6abc332234c94033b76011b1c4499.setContent(html_61825f5f3407e1075df81d7be1236e26);
+            
+        
+
+        polygon_42cbb6b3e2b23226f47da5f0a4a3fc3f.bindPopup(popup_4fa6abc332234c94033b76011b1c4499)
+        ;
+
+        
+    
+    
+            var polygon_87df12a401f2aac5c13233102d4491a8 = L.polygon(
+                [[37.807593510649816, -122.47035260343908], [37.7849858338949, -122.45045526166021], [37.77057412484903, -122.46683007510092], [37.77057412484905, -122.46683007510092], [37.807593510649816, -122.47035260343908]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C1FF00", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_2cb613bb0338776b13885719aee5c2ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1fcdb42b8e51d5ae5b6038c8324ec50 = $(`<div id="html_a1fcdb42b8e51d5ae5b6038c8324ec50" style="width: 100.0%; height: 100.0%;">站点 34<br>区域内需求点: 245<br>密度: 60.54 点/平方公里</div>`)[0];
+                popup_2cb613bb0338776b13885719aee5c2ca.setContent(html_a1fcdb42b8e51d5ae5b6038c8324ec50);
+            
+        
+
+        polygon_87df12a401f2aac5c13233102d4491a8.bindPopup(popup_2cb613bb0338776b13885719aee5c2ca)
+        ;
+
+        
+    
+    
+            var polygon_f3b2bef8be3c6d2db39c97308e9a91bd = L.polygon(
+                [[37.719240852634265, -122.44427011497268], [37.71346772026729, -122.4641742442207], [37.72670864903185, -122.45381840967215], [37.719240852634265, -122.44427011497267], [37.719240852634265, -122.44427011497268]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_47adfedf5449696f048a161904df74c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4aea2062481cf59b7ca0663d20361d82 = $(`<div id="html_4aea2062481cf59b7ca0663d20361d82" style="width: 100.0%; height: 100.0%;">站点 28<br>区域内需求点: 165<br>密度: 131.44 点/平方公里</div>`)[0];
+                popup_47adfedf5449696f048a161904df74c7.setContent(html_4aea2062481cf59b7ca0663d20361d82);
+            
+        
+
+        polygon_f3b2bef8be3c6d2db39c97308e9a91bd.bindPopup(popup_47adfedf5449696f048a161904df74c7)
+        ;
+
+        
+    
+    
+            var polygon_bef95148f90ef9277524c136fc20ec78 = L.polygon(
+                [[37.78975302549061, -122.39788861490317], [37.77797358939124, -122.3536853263434], [37.766002968127836, -122.35425271295682], [37.76495574443902, -122.36498331641553], [37.7764131356638, -122.39658674509812], [37.78975302549061, -122.39788861490317]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#57FF00", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_98c14aa17426a438846c2428e5d90bd1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1345c6e4a5b5bc5d13eca50fcfd80355 = $(`<div id="html_1345c6e4a5b5bc5d13eca50fcfd80355" style="width: 100.0%; height: 100.0%;">站点 23<br>区域内需求点: 281<br>密度: 36.69 点/平方公里</div>`)[0];
+                popup_98c14aa17426a438846c2428e5d90bd1.setContent(html_1345c6e4a5b5bc5d13eca50fcfd80355);
+            
+        
+
+        polygon_bef95148f90ef9277524c136fc20ec78.bindPopup(popup_98c14aa17426a438846c2428e5d90bd1)
+        ;
+
+        
+    
+    
+            var polygon_7978fd1b0255b7d2661c6a12d1e8caac = L.polygon(
+                [[37.722910301648575, -122.4172572855999], [37.74217876040155, -122.44171911387191], [37.754182172953435, -122.44610922324232], [37.75532301017836, -122.44560859424708], [37.76037731320383, -122.41534830770658], [37.74949419207565, -122.40203966454938], [37.722910301648575, -122.4172572855999]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_38b1fa715426398d17de229362a05787 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_553ddc21d09b27bd9a2fd6653f0b3e7f = $(`<div id="html_553ddc21d09b27bd9a2fd6653f0b3e7f" style="width: 100.0%; height: 100.0%;">站点 7<br>区域内需求点: 201<br>密度: 17.16 点/平方公里</div>`)[0];
+                popup_38b1fa715426398d17de229362a05787.setContent(html_553ddc21d09b27bd9a2fd6653f0b3e7f);
+            
+        
+
+        polygon_7978fd1b0255b7d2661c6a12d1e8caac.bindPopup(popup_38b1fa715426398d17de229362a05787)
+        ;
+
+        
+    
+    
+            var polygon_8df9be73bc223eb9ebfb5851e80b6c20 = L.polygon(
+                [[37.795886541296824, -122.42090513002158], [37.79939754294077, -122.43408044821948], [37.799397542940774, -122.43408044821949], [37.79939754294079, -122.43408044821949], [37.818280548995055, -122.41262527587635], [37.81854912839096, -122.40959590359452], [37.80450765528324, -122.41333772101585], [37.795886541296824, -122.42090513002158]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C0FF00", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_012d2472a8c400e3949010f5386e8730 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a4fc4fe129e1f8625d18d217d212b1a = $(`<div id="html_0a4fc4fe129e1f8625d18d217d212b1a" style="width: 100.0%; height: 100.0%;">站点 16<br>区域内需求点: 172<br>密度: 60.21 点/平方公里</div>`)[0];
+                popup_012d2472a8c400e3949010f5386e8730.setContent(html_0a4fc4fe129e1f8625d18d217d212b1a);
+            
+        
+
+        polygon_8df9be73bc223eb9ebfb5851e80b6c20.bindPopup(popup_012d2472a8c400e3949010f5386e8730)
+        ;
+
+        
+    
+    
+            var polygon_f03f99da7bfaa7e57b611682a7d5acb2 = L.polygon(
+                [[37.77914621200257, -122.4041255103774], [37.76495574443902, -122.36498331641553], [37.74949419207565, -122.40203966454938], [37.76037731320383, -122.41534830770658], [37.7732695527298, -122.4141055424225], [37.77914621200257, -122.4041255103774]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#05FF00", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+        var popup_56fb3c81354737156623aa34f1672c0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9866c4ec777ef61c22baf1eea33d67fc = $(`<div id="html_9866c4ec777ef61c22baf1eea33d67fc" style="width: 100.0%; height: 100.0%;">站点 13<br>区域内需求点: 185<br>密度: 18.49 点/平方公里</div>`)[0];
+                popup_56fb3c81354737156623aa34f1672c0a.setContent(html_9866c4ec777ef61c22baf1eea33d67fc);
+            
+        
+
+        polygon_f03f99da7bfaa7e57b611682a7d5acb2.bindPopup(popup_56fb3c81354737156623aa34f1672c0a)
+        ;
+
+        
+    
+    
+            var marker_f14049e0c85a5dd2c70f88f7f4ca74c1 = L.marker(
+                [37.768644636057196, -122.42312566667366],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_b490000c9ae2e9df218f5b2a33b8b0c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b25e2c99ff0a76da0ddd5638d384d89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83f1b93d1afd283b1b561aadcb85521e = $(`<div id="html_83f1b93d1afd283b1b561aadcb85521e" style="width: 100.0%; height: 100.0%;">站点 1<br>覆盖需求点: 337</div>`)[0];
+                popup_8b25e2c99ff0a76da0ddd5638d384d89.setContent(html_83f1b93d1afd283b1b561aadcb85521e);
+            
+        
+
+        marker_f14049e0c85a5dd2c70f88f7f4ca74c1.bindPopup(popup_8b25e2c99ff0a76da0ddd5638d384d89)
+        ;
+
+        
+    
+    
+                marker_f14049e0c85a5dd2c70f88f7f4ca74c1.setIcon(icon_b490000c9ae2e9df218f5b2a33b8b0c1);
+            
+    
+            var marker_bbcd59559e9497f69055dd2542fff28c = L.marker(
+                [37.734176445429426, -122.46336670437162],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_16da6ea013fe978323bf36ddac2e232a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bdeff40ecd59a2ae51dd8a0da4e6d518 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb4602fa5646325762f5f51a6be5593f = $(`<div id="html_bb4602fa5646325762f5f51a6be5593f" style="width: 100.0%; height: 100.0%;">站点 29<br>覆盖需求点: 176</div>`)[0];
+                popup_bdeff40ecd59a2ae51dd8a0da4e6d518.setContent(html_bb4602fa5646325762f5f51a6be5593f);
+            
+        
+
+        marker_bbcd59559e9497f69055dd2542fff28c.bindPopup(popup_bdeff40ecd59a2ae51dd8a0da4e6d518)
+        ;
+
+        
+    
+    
+                marker_bbcd59559e9497f69055dd2542fff28c.setIcon(icon_16da6ea013fe978323bf36ddac2e232a);
+            
+    
+            var marker_8bbaf0686bc902f7f6675ab91e0238bb = L.marker(
+                [37.783277522169335, -122.41571583538719],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_038ee09cb341dac6d2b41476b56556d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc25c5d3099c6de8af2c4cea2c247861 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23f9547e804a988b71f87236229b4d2b = $(`<div id="html_23f9547e804a988b71f87236229b4d2b" style="width: 100.0%; height: 100.0%;">站点 24<br>覆盖需求点: 416</div>`)[0];
+                popup_dc25c5d3099c6de8af2c4cea2c247861.setContent(html_23f9547e804a988b71f87236229b4d2b);
+            
+        
+
+        marker_8bbaf0686bc902f7f6675ab91e0238bb.bindPopup(popup_dc25c5d3099c6de8af2c4cea2c247861)
+        ;
+
+        
+    
+    
+                marker_8bbaf0686bc902f7f6675ab91e0238bb.setIcon(icon_038ee09cb341dac6d2b41476b56556d8);
+            
+    
+            var marker_ffd98a582b622a788bbcb25abdf73356 = L.marker(
+                [37.73426434728477, -122.3924733501884],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_ff18b7f7a743c6f53e544dcdec35852c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e0c1309303c2298ae1e732f67029b92 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8271e3937bb4464aad63f3207d0e315 = $(`<div id="html_f8271e3937bb4464aad63f3207d0e315" style="width: 100.0%; height: 100.0%;">站点 22<br>覆盖需求点: 240</div>`)[0];
+                popup_7e0c1309303c2298ae1e732f67029b92.setContent(html_f8271e3937bb4464aad63f3207d0e315);
+            
+        
+
+        marker_ffd98a582b622a788bbcb25abdf73356.bindPopup(popup_7e0c1309303c2298ae1e732f67029b92)
+        ;
+
+        
+    
+    
+                marker_ffd98a582b622a788bbcb25abdf73356.setIcon(icon_ff18b7f7a743c6f53e544dcdec35852c);
+            
+    
+            var marker_1d606eb18e460bd1b8a462448781a44d = L.marker(
+                [37.77057412484903, -122.46683007510092],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_630cfe8a0388094e6591e1549719d50a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c97c3af44d54110bf3525237506b9141 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6044254ebf8ff116b05665f69590248d = $(`<div id="html_6044254ebf8ff116b05665f69590248d" style="width: 100.0%; height: 100.0%;">站点 34<br>覆盖需求点: 245</div>`)[0];
+                popup_c97c3af44d54110bf3525237506b9141.setContent(html_6044254ebf8ff116b05665f69590248d);
+            
+        
+
+        marker_1d606eb18e460bd1b8a462448781a44d.bindPopup(popup_c97c3af44d54110bf3525237506b9141)
+        ;
+
+        
+    
+    
+                marker_1d606eb18e460bd1b8a462448781a44d.setIcon(icon_630cfe8a0388094e6591e1549719d50a);
+            
+    
+            var marker_86dfade143cad179838e2ef652941852 = L.marker(
+                [37.719240852634265, -122.44427011497267],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_639c917c04a010c78f4f7e128089e05e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_726dcee73db3206c3aa7e071b9d5a438 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17b293c0f21a2cf6e2a30e9130385cf8 = $(`<div id="html_17b293c0f21a2cf6e2a30e9130385cf8" style="width: 100.0%; height: 100.0%;">站点 28<br>覆盖需求点: 165</div>`)[0];
+                popup_726dcee73db3206c3aa7e071b9d5a438.setContent(html_17b293c0f21a2cf6e2a30e9130385cf8);
+            
+        
+
+        marker_86dfade143cad179838e2ef652941852.bindPopup(popup_726dcee73db3206c3aa7e071b9d5a438)
+        ;
+
+        
+    
+    
+                marker_86dfade143cad179838e2ef652941852.setIcon(icon_639c917c04a010c78f4f7e128089e05e);
+            
+    
+            var marker_934e85626f1a9d8605fd9476286c29dd = L.marker(
+                [37.78975302549062, -122.39788861490318],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_32bbf5cda04596fbe505c137211fbf52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb1e21a3908756bfbd27a0d5b26d0d31 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b467a37e75b2d87d526871f388e26c6d = $(`<div id="html_b467a37e75b2d87d526871f388e26c6d" style="width: 100.0%; height: 100.0%;">站点 23<br>覆盖需求点: 281</div>`)[0];
+                popup_bb1e21a3908756bfbd27a0d5b26d0d31.setContent(html_b467a37e75b2d87d526871f388e26c6d);
+            
+        
+
+        marker_934e85626f1a9d8605fd9476286c29dd.bindPopup(popup_bb1e21a3908756bfbd27a0d5b26d0d31)
+        ;
+
+        
+    
+    
+                marker_934e85626f1a9d8605fd9476286c29dd.setIcon(icon_32bbf5cda04596fbe505c137211fbf52);
+            
+    
+            var marker_253257e1a5859a705402c5b21a5d3d34 = L.marker(
+                [37.75003120473493, -122.42001670991871],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_082c6ac3165d4f3861324bea2a9cba5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee2c0427319182d4ceded28d1fc97df7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88274bf6052ced8e0d361bc12d1086bc = $(`<div id="html_88274bf6052ced8e0d361bc12d1086bc" style="width: 100.0%; height: 100.0%;">站点 7<br>覆盖需求点: 201</div>`)[0];
+                popup_ee2c0427319182d4ceded28d1fc97df7.setContent(html_88274bf6052ced8e0d361bc12d1086bc);
+            
+        
+
+        marker_253257e1a5859a705402c5b21a5d3d34.bindPopup(popup_ee2c0427319182d4ceded28d1fc97df7)
+        ;
+
+        
+    
+    
+                marker_253257e1a5859a705402c5b21a5d3d34.setIcon(icon_082c6ac3165d4f3861324bea2a9cba5e);
+            
+    
+            var marker_4bd0d3501192cbf0e02aad2078181e29 = L.marker(
+                [37.799397542940774, -122.4340804482195],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_53b80d28f8f828d6a6e6123f56db7bf3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da156d06479443611681a31a7ce6ed99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6435f845897771733691545a44d072c = $(`<div id="html_c6435f845897771733691545a44d072c" style="width: 100.0%; height: 100.0%;">站点 16<br>覆盖需求点: 172</div>`)[0];
+                popup_da156d06479443611681a31a7ce6ed99.setContent(html_c6435f845897771733691545a44d072c);
+            
+        
+
+        marker_4bd0d3501192cbf0e02aad2078181e29.bindPopup(popup_da156d06479443611681a31a7ce6ed99)
+        ;
+
+        
+    
+    
+                marker_4bd0d3501192cbf0e02aad2078181e29.setIcon(icon_53b80d28f8f828d6a6e6123f56db7bf3);
+            
+    
+            var marker_35c4bad78159ba88363034ec4b62631b = L.marker(
+                [37.76700679247595, -122.40613495086744],
+                {
+}
+            ).addTo(map_9e7494ad9f0843c35c0666cf7d9e78ce);
+        
+    
+            var icon_37d7cedcfa6ec71e312caaee29e29c0b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d81ccbb78931a37cd1d0b720f743ed24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aef544ac754c6dffbda3e3c5b1a5e752 = $(`<div id="html_aef544ac754c6dffbda3e3c5b1a5e752" style="width: 100.0%; height: 100.0%;">站点 13<br>覆盖需求点: 185</div>`)[0];
+                popup_d81ccbb78931a37cd1d0b720f743ed24.setContent(html_aef544ac754c6dffbda3e3c5b1a5e752);
+            
+        
+
+        marker_35c4bad78159ba88363034ec4b62631b.bindPopup(popup_d81ccbb78931a37cd1d0b720f743ed24)
+        ;
+
+        
+    
+    
+                marker_35c4bad78159ba88363034ec4b62631b.setIcon(icon_37d7cedcfa6ec71e312caaee29e29c0b);
+            
+</script>
+</html>
