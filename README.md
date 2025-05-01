@@ -42,26 +42,40 @@
 - **Exploratory Data Analysis**
   1. **Temporal Analysis**  
      - Plotted crash counts over `year`, `month`, `week`, and `day`
-     - Visualized weekly and daily crash trends using heatmaps
+     - Visualized weekly and daily crash trends using heatmaps  
+     
+     ![Temporal Summary](results/output/temporal_analysis_summary.png)
+
+     > Yearly, monthly, weekly, and daily patterns in crash frequency
+
   2. **Spatial Analysis**  
-     - Generated crash density heatmaps over SF using latitude/longitude
-     - Created cluster maps by severity level
-     - Analyzed accident frequencies across 100+ neighborhoods
+     - Generated crash density heatmaps over SF using KDE  
+       [![Heatmap Screenshot](results/output/screenshot-heatmap.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_heatmap.html)  
+       🔗 [Click to view interactive heatmap](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_heatmap.html)
+       
+     - Created severity-based cluster maps with DBSCAN  
+       [![Cluster Map Screenshot](results/output/screenshot-clustermap.png)](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_cluster_map.html)  
+       🔗 [Click to view interactive cluster map](https://raw.githack.com/sunaminusone/CrashSight-SF/main/results/maps/sf_crash_cluster_map.html)
+
+     - Analyzed accident frequencies across 100+ neighborhoods using bar plots
+
   3. **Collision Characteristics**  
      - Investigated crash patterns based on:
        - Road surface conditions
        - Weather types
        - Lighting conditions
        - Time-of-day categories
+
+     ![Collision Characteristics](results/output/collision_characteristics_summary.png)
+
+     > Summary of environment conditions where crashes most commonly occur
+
   4. **Responsibility Analysis**  
      - Explored fault distribution and associated patterns (e.g., driver vs. pedestrian responsibility)
 
-- **📊 Temporal Crash Summary**
+     ![Responsibility Summary](results/output/responsibility_analysis_summary.png)
 
-![Temporal Summary](results/output/temporal_analysis_summary.png)
-
-> Yearly, monthly, weekly, and daily patterns in crash frequency
-
+     > Distribution of responsibility in crash reports (driver, pedestrian, unknown, etc.)
 ---
 
 ### 🔥 Module 2: Spatial Hotspot Detection
